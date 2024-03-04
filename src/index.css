@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: #0F172A;
+    height: 100vh;
+    color: white;
+}
+body::-webkit-scrollbar{
+    background-color: transparent;
+    width: 5px;
+}
+body::-webkit-scrollbar-thumb{
+    background: linear-gradient( rgb(41, 199, 23), rgb(255, 6, 2), rgb(4, 75, 255));
+    border-radius: 20px;
+    
+}
+.logoClass{
+    /* font-size: 40px; */
+    /* -webkit-text-stroke: 2px #fff; */
+    /* color: linear-gradient(to right, pink, blue); */
+    transition: all .3s ease-in-out;
+    /* color: transparent; */
+    transition: all .3s ease-in-out;
+    /* -webkit-text-stroke: 1px #fff; */
+
+    /* background-color: transparent; */
+    /* text-shadow: 2px 2px 2px rgb(0, 55, 193); */
+    
+}
+.logoClass:hover{
+    -webkit-transform: scale(1) rotate(180deg);
+    transform: scale(1) rotate(-360deg);
+    -webkit-text-stroke: 1px #fff;
+
+    background-color: transparent;
+    text-shadow: 2px 2px 2px rgb(0, 55, 193);
+
+    
+}
+/* .intro{ */
+    /* background-color: rgb(47, 100, 234); */
+    /* background: linear-gradient(to right, rgb(123, 45, 191), rgb(213, 83, 153), rgb(123, 45, 191));
+    border: 1px solid rgb(47, 100, 234);
+    color: #ffffff;
+    transition: all .3s ease-in-out;
+
+} */
+/* .intro:hover{
+    border: 1px solid rgb(158, 166, 206);
+    box-shadow: 1px 1px 16px 4px rgb(85 115 191);
+
+} */
+
+
+.Dashboard{
+    border-radius: 20px;
+    padding: 7px;
+    margin-left: 10px;
+}
+.Dashboard:hover {
+    -webkit-transform: scale(1) rotate(180deg);
+    transform: scale(1) rotate(360deg);
+
+  }
+  .menuclass{
+    transition: all 2s ease-in-out;
+  }
+.menu-link-class:hover{
+    color: red;
+}
+.logo2Class {
+    font-size: 60px;
+    background: linear-gradient(to right, rgb(123, 45, 191), rgb(213, 83, 153), rgb(123, 45, 191));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all .3s ease-in-out;
+    -webkit-text-stroke: 1px #fff;
+    width: fit-content;
+    background-color: transparent;
+
+    /* text-shadow: 2px 2px 2px rgb(0, 55, 193); */
+}
+.logo2Class:hover{
+    -webkit-transform: scale(1) rotate(180deg);
+    transform: scale(1) rotate(360deg);
+    cursor: pointer;
+    
+}
+
+

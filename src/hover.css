@@ -1,0 +1,333 @@
+.box {
+    width: fit-content;
+    height: fit-content;
+    /* background: #3084AC; */
+    /* margin: auto; */
+    /* border: 2px solid #256584; */
+    text-align: center;
+    color: #fff;
+    position: relative;
+    /* top: 50px; */
+    cursor: pointer;
+    transition: 500ms ease;
+}
+
+.box:before {
+    position: absolute;
+    width: 0;
+    height: 2px;
+    content: "";
+    background: #fff;
+    top: -2px;
+    left: -2px;
+    transition: 100ms width ease 300ms;
+    -web-kit-transition: 100ms width ease 300ms;
+}
+
+.box:after {
+    position: absolute;
+    width: 2px;
+    height: 0;
+    content: "";
+    background: #fff;
+    top: -2px;
+    right: -2px;
+    transition: 100ms height ease 200ms;
+    -web-kit-transition: 100ms height ease 200ms;
+}
+
+.box-inner:after {
+    position: absolute;
+    width: 0;
+    height: 2px;
+    content: "";
+    background: #fff;
+    bottom: -2px;
+    right: -2px;
+    transition: 100ms width ease 100ms;
+    -web-kit-transition: 100ms width ease 100ms;
+}
+
+.box-inner:before {
+    position: absolute;
+    width: 2px;
+    height: 0;
+    content: "";
+    background: #fff;
+    bottom: -2px;
+    left: -2px;
+    transition: 100ms height ease 0ms;
+    -web-kit-transition: 100ms height ease 0ms;
+}
+
+.box:hover {
+    border-color: transparent;
+    background: #0f2834;
+}
+
+.box:hover:before {
+    width: 100%;
+    transition: 100ms width ease 0ms;
+    -web-kit-transition: 100ms width ease 0ms;
+}
+
+.box:hover:after {
+    height: 100%;
+    transition: 100ms height ease 100ms;
+    -web-kit-transition: 100ms height ease 100ms;
+}
+
+.box:hover .box-inner:after {
+    width: 100%;
+    transition: 100ms width ease 200ms;
+    -web-kit-transition: 100ms width ease 200ms;
+}
+
+.box:hover .box-inner:before {
+    height: 100%;
+    transition: 100ms height ease 300ms;
+    -web-kit-transition: 100ms height ease 300ms;
+}
+
+.hover-animate:hover {
+    background: white;
+    animation: slide 1s forwards;
+}
+
+@keyframes slide {
+    0% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* 
+.animated-button {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3084AC;
+    overflow: hidden;
+    border-radius: 15px;
+    color: white;
+} */
+
+
+/* .animated-button::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background: #000000;
+     box-shadow: 0 0 5px #861111;
+    animation: boxAnimate 4s linear infinite;
+} */
+
+/* .animated-button::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #3084AC;
+    box-shadow: 0 0 5px #a01010; 
+    border-radius: 10px;
+} */
+
+/* 
+@keyframes boxAnimate {
+    0% {
+        transform:rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+
+
+.animated-button2 {
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    /* border: 2px solid #3084AC; */
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+.animated-button2::before {
+    content: '';
+    position: absolute;
+    width: 250%;
+    height: 250%;
+
+    background-image: conic-gradient(#ffffff 10deg, transparent 120deg);
+
+}
+
+.animated-button2::after {
+    content: 'Introduction';
+    position: absolute;
+    /* width: 100%; */
+    /* height: 100%; */
+    inset: 0px;
+    background: linear-gradient(to right, rgb(123, 45, 191), rgb(213, 83, 153), rgb(123, 45, 191));
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 13px;
+}
+
+.animated-button2:hover::before {
+    animation: boxAnimate 2s linear infinite;
+}
+
+.animated-button2:hover::after {
+    inset: 2px;
+}
+
+/* 
+.animated-button1 {
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+   
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+.animated-button1::before {
+    content: '';
+    position: absolute;
+    width: 250%;
+    height: 250%;
+
+    background-image: conic-gradient(#ffffff 10deg, transparent 120deg);
+
+}
+
+.animated-button1::after {
+    content: 'DAPP';
+    position: absolute;
+  
+    inset: 0px;
+    background: linear-gradient(to right, rgb(123, 45, 191), rgb(213, 83, 153), rgb(123, 45, 191));
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 13px;
+}
+
+.animated-button1:hover::before {
+    animation: boxAnimate 2s linear infinite;
+}
+
+.animated-button1:hover::after {
+    inset: 2px;
+}
+
+
+@keyframes boxAnimate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+
+
+.animated-button1 {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.animated-button1 .animated-bg {
+    position: absolute;
+    width: 250%;
+    height: 500%;
+    
+    z-index: 1;
+}
+
+.animated-button1 .animated-content {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to right, rgb(123, 45, 191), rgb(213, 83, 153), rgb(123, 45, 191));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 8px;
+padding: 5px 20px; 
+/* inset: 4px; */
+   
+}
+
+.animated-button1:hover .animated-bg {
+    background-image: conic-gradient(#ffffff 10deg, transparent 120deg);
+    animation: boxAnimate 2s linear infinite;
+}
+
+@keyframes boxAnimate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* .hover-animate:hover {
+    background: white;
+    background-size: 50% 50%;
+    animation: slide 1s forwards;
+}
+
+.animated-bg {
+    background: white;
+    background-size: 50% 50%;
+    animation: slide 1s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        background-position: -100% 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+} */
